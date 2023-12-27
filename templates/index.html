@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Are you Diabetic?</h1>
+    <h1 style="text-align: center">Introduce your data:</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="pregnancies" id="pregnancies" placeholder="Pregnancies">
+            <input type="number" name="glucose" id="glucose" placeholder="Glucose">
+            <input type="number" name="blood_pressure" id="blood_pressure" placeholder="Blood Pressure">
+            <input type="number" name="skin_thickness" id="skin_thickness" placeholder="Skin Thickness">
+            <input type="number" name="insulin" id="insulin" placeholder="Insulin">
+            <input type="number" name="bmi" id="bmi" placeholder="BMI" step="any">
+            <input type="number" name="diabetes" id="diabetes" placeholder="Diabetes Pedigree Function" step="any">
+            <input type="number" name="age" id="age" placeholder="Age">
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
